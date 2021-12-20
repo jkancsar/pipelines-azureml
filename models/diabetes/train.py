@@ -12,12 +12,6 @@ from azureml.core.run import Run
 
 from utils import mylib
 
-from azureml.core import Environment
-my_env = Environment()
-my_env.docker.base_image_registry.address = "myreg4536.azurecr.io"
-#my_env.docker.base_image_registry.username = "username"
-#my_env.docker.base_image_registry.password = "password"
-
 os.makedirs('./outputs', exist_ok=True)
 
 X, y = load_diabetes(return_X_y=True)
